@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p>Usuario:</p>
+        <input type="text" id="usuario">
+        <p>Senha:</p>
+        <input type="password" id="senha">
+        <div id="botão">
+            <button id="loginButton">Logar</button>
+        </div>
+    </div>
+    <style>
+        body{
+            background-color: rgb(223, 142, 28);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container{
+            background-color: rgb(221, 238, 187);
+            padding:15px;
+            width: 200px;
+            text-align:conter;
+            border-radius: 15px;
+        }
+    </style>
+
+<script>
+    const loginButton = document.getElementById('loginButton');
+
+    loginButton.addEventListener('click', function() {
+        const usuario = document.getElementById('usuario').value;
+        const senha = document.getElementById('senha').value;
+
+        if (usuario === '' || senha === '') {
+            alert('Por favor, preencha os campos de usuário e senha.');
+        } else {
+            alert('Bem-vindo, ' + usuario + '!');
+        }
+    });
+</script>
+</body>
+</html>
